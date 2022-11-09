@@ -1,7 +1,18 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
-import './database';
+//import { putDb, getDb } from './database';
+
+//Import css
 import '../css/style.css';
+
+import Logo from '../images/logo.png';
+import Letter from '../images/letter-j.png';
+
+
+window.addEventListener('load', function () {
+  document.getElementById('logo').src = Logo;
+  document.getElementById('letter').src = Letter;
+});
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
