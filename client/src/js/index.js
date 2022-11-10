@@ -1,6 +1,6 @@
 import { Workbox } from 'workbox-window';
 import Editor from './editor';
-import { initdb, putDb, getDb } from './database';
+import './database';
 
 //Import css
 import '../css/style.css';
@@ -10,7 +10,7 @@ import Letter from '../images/letter-j.png';
 
 
 window.addEventListener('load', function () {
-  initdb();
+  //initdb();
   document.getElementById('logo').src = Logo;
   document.getElementById('letter').src = Letter;
 });
