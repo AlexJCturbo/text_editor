@@ -5,14 +5,6 @@ import './database';
 //Import css
 import '../css/style.css';
 
-import Logo from '../images/logo.png';
-import Letter from '../images/letter-j.png';
-
-window.addEventListener('load', function () {
-  document.getElementById('logo').src = Logo;
-  document.getElementById('letter').src = Letter;
-});
-
 const main = document.querySelector('#main');
 main.innerHTML = ' ';
 
@@ -36,7 +28,7 @@ if (typeof editor === 'undefined') {
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
   // register workbox service worker
-  const workboxSW = new Workbox('./src-sw.js');
+  const workboxSW = new Workbox('./service-worker.js');
   workboxSW.register();
   console.log('Service worker registered');
 } else {
