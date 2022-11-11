@@ -8,15 +8,13 @@ import '../css/style.css';
 import Logo from '../images/logo.png';
 import Letter from '../images/letter-j.png';
 
-
 window.addEventListener('load', function () {
-  //initdb();
   document.getElementById('logo').src = Logo;
   document.getElementById('letter').src = Letter;
 });
 
 const main = document.querySelector('#main');
-main.innerHTML = '';
+main.innerHTML = ' ';
 
 const loadSpinner = () => {
   const spinner = document.createElement('div');
@@ -38,8 +36,9 @@ if (typeof editor === 'undefined') {
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
   // register workbox service worker
-  const workboxSW = new Workbox('/src-sw.js');
+  const workboxSW = new Workbox('./src-sw.js');
   workboxSW.register();
+  console.log('Service worker registered');
 } else {
   console.error('Service workers are not supported in this browser.');
 }
