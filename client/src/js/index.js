@@ -8,16 +8,11 @@ import '../css/style.css';
 const main = document.querySelector('#main');
 main.innerHTML = ' ';
 
-
 import Logo from '../images/logo.png';
-import Letter from '../images/letter-j.png';
 
 window.addEventListener('load', function () {
   document.getElementById('logo').src = Logo;
-  document.getElementById('letter-j').src = Letter;
 });
-
-
 
 const loadSpinner = () => {
   const spinner = document.createElement('div');

@@ -47,12 +47,6 @@ module.exports = () => {
             destination: path.join('assets', 'image'),
             purpose: "maskable",
           },
-          {
-            src: path.resolve('src/images/letter-j.png'),
-            size: [64, 128, 144],
-            destination: path.join('assets', 'image'),
-            purpose: "maskable",
-          },
         ],
       }),
     ],
