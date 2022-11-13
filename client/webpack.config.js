@@ -43,7 +43,7 @@ module.exports = () => {
           },
           {
             src: path.resolve('src/images/logo.png'),
-            size: '1024x1024',
+            size: '512x512',
             destination: path.join('assets', 'image'),
             purpose: "maskable",
           },
@@ -77,7 +77,7 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              // plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
             },
           }
         }
